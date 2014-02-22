@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class R : OpenQuant.API.Indicator
+	public class R : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -26,7 +26,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.R(series.series, length);
 		}
-		public R(OpenQuant.API.Indicator indicator, int length)
+		public R(global::OpenQuant.API.Indicator indicator, int length)
 		{
 			this.indicator = new SmartQuant.Indicators.R(indicator.indicator, length);
 		}
@@ -38,7 +38,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.R(series.series, length, color);
 		}
-		public R(OpenQuant.API.Indicator indicator, int length, Color color)
+		public R(global::OpenQuant.API.Indicator indicator, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.R(indicator.indicator, length, color);
 		}

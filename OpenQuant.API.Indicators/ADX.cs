@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class ADX : OpenQuant.API.Indicator
+	public class ADX : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -22,11 +22,11 @@ namespace OpenQuant.API.Indicators
 		{
 			get
 			{
-				return OpenQuant.API.EnumConverter.Convert((this.indicator as SmartQuant.Indicators.ADX).Style);
+				return global::OpenQuant.API.EnumConverter.Convert((this.indicator as SmartQuant.Indicators.ADX).Style);
 			}
 			set
 			{
-				(this.indicator as SmartQuant.Indicators.ADX).Style = OpenQuant.API.EnumConverter.Convert(value);
+				(this.indicator as SmartQuant.Indicators.ADX).Style = global::OpenQuant.API.EnumConverter.Convert(value);
 			}
 		}
 		private ADX()
@@ -37,7 +37,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.ADX(series.series, length);
 		}
-		public ADX(OpenQuant.API.Indicator indicator, int length)
+		public ADX(global::OpenQuant.API.Indicator indicator, int length)
 		{
 			this.indicator = new SmartQuant.Indicators.ADX(indicator.indicator, length);
 		}
@@ -45,7 +45,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.ADX(series.series, length, color);
 		}
-		public ADX(OpenQuant.API.Indicator indicator, int length, Color color)
+		public ADX(global::OpenQuant.API.Indicator indicator, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.ADX(indicator.indicator, length, color);
 		}

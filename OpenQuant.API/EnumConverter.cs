@@ -238,25 +238,25 @@ namespace OpenQuant.API
 				throw new NotImplementedException("BarType is not supported : " + barType);
 			}
 		}
-		internal static OpenQuant.API.Indicators.RegressionDistanceMode Convert(SmartQuant.Indicators.RegressionDistanceMode mode)
+		internal static global::OpenQuant.API.Indicators.RegressionDistanceMode Convert(SmartQuant.Indicators.RegressionDistanceMode mode)
 		{
 			switch (mode)
 			{
 			case SmartQuant.Indicators.RegressionDistanceMode.Time:
-				return OpenQuant.API.Indicators.RegressionDistanceMode.Time;
+				return global::OpenQuant.API.Indicators.RegressionDistanceMode.Time;
 			case SmartQuant.Indicators.RegressionDistanceMode.Index:
-				return OpenQuant.API.Indicators.RegressionDistanceMode.Index;
+				return global::OpenQuant.API.Indicators.RegressionDistanceMode.Index;
 			default:
 				throw new NotImplementedException("RegressionDistanceMode is not supported : " + mode);
 			}
 		}
-		internal static SmartQuant.Indicators.RegressionDistanceMode Convert(OpenQuant.API.Indicators.RegressionDistanceMode mode)
+		internal static SmartQuant.Indicators.RegressionDistanceMode Convert(global::OpenQuant.API.Indicators.RegressionDistanceMode mode)
 		{
 			switch (mode)
 			{
-			case OpenQuant.API.Indicators.RegressionDistanceMode.Time:
+			case global::OpenQuant.API.Indicators.RegressionDistanceMode.Time:
 				return SmartQuant.Indicators.RegressionDistanceMode.Time;
-			case OpenQuant.API.Indicators.RegressionDistanceMode.Index:
+			case global::OpenQuant.API.Indicators.RegressionDistanceMode.Index:
 				return SmartQuant.Indicators.RegressionDistanceMode.Index;
 			default:
 				throw new NotImplementedException("RegressionDistanceMode is not supported : " + mode);

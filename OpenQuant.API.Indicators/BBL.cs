@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class BBL : OpenQuant.API.Indicator
+	public class BBL : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -38,33 +38,33 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.BBL(series.series, length, k);
 		}
-		public BBL(OpenQuant.API.Indicator indicator, int length, double k)
+		public BBL(global::OpenQuant.API.Indicator indicator, int length, double k)
 		{
 			this.indicator = new SmartQuant.Indicators.BBL(indicator.indicator, length, k);
 		}
 		public BBL(BarSeries series, int length, double k, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.BBL(series.series, length, k, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.BBL(series.series, length, k, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
-		public BBL(OpenQuant.API.Indicator indicator, int length, double k, BarData option)
+		public BBL(global::OpenQuant.API.Indicator indicator, int length, double k, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.BBL(indicator.indicator, length, k, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.BBL(indicator.indicator, length, k, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
 		public BBL(BarSeries series, int length, double k, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.BBL(series.series, length, k, color);
 		}
-		public BBL(OpenQuant.API.Indicator indicator, int length, double k, Color color)
+		public BBL(global::OpenQuant.API.Indicator indicator, int length, double k, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.BBL(indicator.indicator, length, k, color);
 		}
 		public BBL(BarSeries series, int length, double k, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.BBL(series.series, length, k, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.BBL(series.series, length, k, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
-		public BBL(OpenQuant.API.Indicator indicator, int length, double k, BarData option, Color color)
+		public BBL(global::OpenQuant.API.Indicator indicator, int length, double k, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.BBL(indicator.indicator, length, k, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.BBL(indicator.indicator, length, k, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
 		public BBL(TimeSeries series, int length, double k)
 		{

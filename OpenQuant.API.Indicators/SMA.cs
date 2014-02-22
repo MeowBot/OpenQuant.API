@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class SMA : OpenQuant.API.Indicator
+	public class SMA : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -26,33 +26,33 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.SMA(series.series, length);
 		}
-		public SMA(OpenQuant.API.Indicator indicator, int length)
+		public SMA(global::OpenQuant.API.Indicator indicator, int length)
 		{
 			this.indicator = new SmartQuant.Indicators.SMA(indicator.indicator, length);
 		}
 		public SMA(BarSeries series, int length, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.SMA(series.series, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.SMA(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
-		public SMA(OpenQuant.API.Indicator indicator, int length, BarData option)
+		public SMA(global::OpenQuant.API.Indicator indicator, int length, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.SMA(indicator.indicator, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.SMA(indicator.indicator, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
 		public SMA(BarSeries series, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.SMA(series.series, length, color);
 		}
-		public SMA(OpenQuant.API.Indicator indicator, int length, Color color)
+		public SMA(global::OpenQuant.API.Indicator indicator, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.SMA(indicator.indicator, length, color);
 		}
 		public SMA(BarSeries series, int length, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.SMA(series.series, length, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.SMA(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
-		public SMA(OpenQuant.API.Indicator indicator, int length, BarData option, Color color)
+		public SMA(global::OpenQuant.API.Indicator indicator, int length, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.SMA(indicator.indicator, length, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.SMA(indicator.indicator, length, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
 		public SMA(TimeSeries series, int length)
 		{

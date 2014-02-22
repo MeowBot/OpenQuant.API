@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class AroonU : OpenQuant.API.Indicator
+	public class AroonU : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -26,7 +26,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.AroonU(series.series, length);
 		}
-		public AroonU(OpenQuant.API.Indicator indicator, int length)
+		public AroonU(global::OpenQuant.API.Indicator indicator, int length)
 		{
 			this.indicator = new SmartQuant.Indicators.AroonU(indicator.indicator, length);
 		}
@@ -38,7 +38,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.AroonU(series.series, length, color);
 		}
-		public AroonU(OpenQuant.API.Indicator indicator, int length, Color color)
+		public AroonU(global::OpenQuant.API.Indicator indicator, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.AroonU(indicator.indicator, length, color);
 		}

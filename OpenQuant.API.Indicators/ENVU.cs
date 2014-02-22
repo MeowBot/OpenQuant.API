@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class ENVU : OpenQuant.API.Indicator
+	public class ENVU : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -38,33 +38,33 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.ENVU(series.series, length, (double)shift);
 		}
-		public ENVU(OpenQuant.API.Indicator indicator, int length, int shift)
+		public ENVU(global::OpenQuant.API.Indicator indicator, int length, int shift)
 		{
 			this.indicator = new SmartQuant.Indicators.ENVU(indicator.indicator, length, (double)shift);
 		}
 		public ENVU(BarSeries series, int length, int shift, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.ENVU(series.series, length, (double)shift, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.ENVU(series.series, length, (double)shift, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
-		public ENVU(OpenQuant.API.Indicator indicator, int length, int shift, BarData option)
+		public ENVU(global::OpenQuant.API.Indicator indicator, int length, int shift, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.ENVU(indicator.indicator, length, (double)shift, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.ENVU(indicator.indicator, length, (double)shift, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
 		public ENVU(BarSeries series, int length, int shift, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.ENVU(series.series, length, (double)shift, color);
 		}
-		public ENVU(OpenQuant.API.Indicator indicator, int length, int shift, Color color)
+		public ENVU(global::OpenQuant.API.Indicator indicator, int length, int shift, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.ENVU(indicator.indicator, length, (double)shift, color);
 		}
 		public ENVU(BarSeries series, int length, int shift, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.ENVU(series.series, length, (double)shift, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.ENVU(series.series, length, (double)shift, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
-		public ENVU(OpenQuant.API.Indicator indicator, int length, int shift, BarData option, Color color)
+		public ENVU(global::OpenQuant.API.Indicator indicator, int length, int shift, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.ENVU(indicator.indicator, length, (double)shift, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.ENVU(indicator.indicator, length, (double)shift, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
 	}
 }

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class D_Slow : OpenQuant.API.Indicator
+	public class D_Slow : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -50,7 +50,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.D_Slow(series.series, length, order1, order2);
 		}
-		public D_Slow(OpenQuant.API.Indicator indicator, int length, int order1, int order2)
+		public D_Slow(global::OpenQuant.API.Indicator indicator, int length, int order1, int order2)
 		{
 			this.indicator = new SmartQuant.Indicators.D_Slow(indicator.indicator, length, order1, order2);
 		}
@@ -58,7 +58,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.D_Slow(series.series, length, order1, order2, color);
 		}
-		public D_Slow(OpenQuant.API.Indicator indicator, int length, int order1, int order2, Color color)
+		public D_Slow(global::OpenQuant.API.Indicator indicator, int length, int order1, int order2, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.D_Slow(indicator.indicator, length, order1, order2, color);
 		}

@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class VROC : OpenQuant.API.Indicator
+	public class VROC : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -26,7 +26,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.VROC(series.series, length);
 		}
-		public VROC(OpenQuant.API.Indicator indicator, int length)
+		public VROC(global::OpenQuant.API.Indicator indicator, int length)
 		{
 			this.indicator = new SmartQuant.Indicators.VROC(indicator.indicator, length);
 		}
@@ -34,7 +34,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.VROC(series.series, length, color);
 		}
-		public VROC(OpenQuant.API.Indicator indicator, int length, Color color)
+		public VROC(global::OpenQuant.API.Indicator indicator, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.VROC(indicator.indicator, length, color);
 		}

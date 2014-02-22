@@ -3,7 +3,7 @@ using System;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class AD : OpenQuant.API.Indicator
+	public class AD : global::OpenQuant.API.Indicator
 	{
 		private AD()
 		{
@@ -13,7 +13,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.AD(series.series);
 		}
-		public AD(OpenQuant.API.Indicator indicator)
+		public AD(global::OpenQuant.API.Indicator indicator)
 		{
 			this.indicator = new SmartQuant.Indicators.AD(indicator.indicator);
 		}
@@ -25,7 +25,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.AD(series.series, color);
 		}
-		public AD(OpenQuant.API.Indicator indicator, Color color)
+		public AD(global::OpenQuant.API.Indicator indicator, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.AD(indicator.indicator, color);
 		}

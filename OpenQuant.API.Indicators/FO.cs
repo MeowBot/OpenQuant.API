@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class FO : OpenQuant.API.Indicator
+	public class FO : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -23,11 +23,11 @@ namespace OpenQuant.API.Indicators
 		{
 			get
 			{
-				return OpenQuant.API.EnumConverter.Convert((this.indicator as SmartQuant.Indicators.FO).DistanceMode);
+				return global::OpenQuant.API.EnumConverter.Convert((this.indicator as SmartQuant.Indicators.FO).DistanceMode);
 			}
 			set
 			{
-				(this.indicator as SmartQuant.Indicators.FO).DistanceMode = OpenQuant.API.EnumConverter.Convert(value);
+				(this.indicator as SmartQuant.Indicators.FO).DistanceMode = global::OpenQuant.API.EnumConverter.Convert(value);
 			}
 		}
 		private FO()
@@ -38,7 +38,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.FO(series.series, length);
 		}
-		public FO(OpenQuant.API.Indicator indicator, int length)
+		public FO(global::OpenQuant.API.Indicator indicator, int length)
 		{
 			this.indicator = new SmartQuant.Indicators.FO(indicator.indicator, length);
 		}
@@ -48,23 +48,23 @@ namespace OpenQuant.API.Indicators
 		}
 		public FO(BarSeries series, int length, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.FO(series.series, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.FO(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
-		public FO(OpenQuant.API.Indicator indicator, int length, BarData option)
+		public FO(global::OpenQuant.API.Indicator indicator, int length, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.FO(indicator.indicator, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.FO(indicator.indicator, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
 		public FO(BarSeries series, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.FO(series.series, length, color);
 		}
-		public FO(OpenQuant.API.Indicator indicator, int length, Color color)
+		public FO(global::OpenQuant.API.Indicator indicator, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.FO(indicator.indicator, length, color);
 		}
 		public FO(BarSeries series, int length, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.FO(series.series, length, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.FO(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
 	}
 }

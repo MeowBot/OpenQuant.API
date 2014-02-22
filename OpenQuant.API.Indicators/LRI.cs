@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class LRI : OpenQuant.API.Indicator
+	public class LRI : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -23,11 +23,11 @@ namespace OpenQuant.API.Indicators
 		{
 			get
 			{
-				return OpenQuant.API.EnumConverter.Convert((this.indicator as SmartQuant.Indicators.LRI).DistanceMode);
+				return global::OpenQuant.API.EnumConverter.Convert((this.indicator as SmartQuant.Indicators.LRI).DistanceMode);
 			}
 			set
 			{
-				(this.indicator as SmartQuant.Indicators.LRI).DistanceMode = OpenQuant.API.EnumConverter.Convert(value);
+				(this.indicator as SmartQuant.Indicators.LRI).DistanceMode = global::OpenQuant.API.EnumConverter.Convert(value);
 			}
 		}
 		private LRI()
@@ -38,65 +38,65 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.LRI(series.series, length);
 		}
-		public LRI(OpenQuant.API.Indicator indicator, int length)
+		public LRI(global::OpenQuant.API.Indicator indicator, int length)
 		{
 			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length);
 		}
 		public LRI(BarSeries series, int length, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
-		public LRI(OpenQuant.API.Indicator indicator, int length, BarData option)
+		public LRI(global::OpenQuant.API.Indicator indicator, int length, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
 		public LRI(BarSeries series, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, color);
 		}
-		public LRI(OpenQuant.API.Indicator indicator, int length, Color color)
+		public LRI(global::OpenQuant.API.Indicator indicator, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, color);
 		}
 		public LRI(BarSeries series, int length, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
-		public LRI(OpenQuant.API.Indicator indicator, int length, BarData option, Color color)
+		public LRI(global::OpenQuant.API.Indicator indicator, int length, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
 		public LRI(BarSeries series, int length, RegressionDistanceMode distanceMode)
 		{
 			this.indicator = new SmartQuant.Indicators.LRI(series.series, length);
 		}
-		public LRI(OpenQuant.API.Indicator indicator, int length, RegressionDistanceMode distanceMode)
+		public LRI(global::OpenQuant.API.Indicator indicator, int length, RegressionDistanceMode distanceMode)
 		{
 			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length);
 		}
 		public LRI(BarSeries series, int length, RegressionDistanceMode distanceMode, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
-		public LRI(OpenQuant.API.Indicator indicator, int length, RegressionDistanceMode distanceMode, BarData option)
+		public LRI(global::OpenQuant.API.Indicator indicator, int length, RegressionDistanceMode distanceMode, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
 		public LRI(BarSeries series, int length, RegressionDistanceMode distanceMode, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, color);
 		}
-		public LRI(OpenQuant.API.Indicator indicator, int length, RegressionDistanceMode distanceMode, Color color)
+		public LRI(global::OpenQuant.API.Indicator indicator, int length, RegressionDistanceMode distanceMode, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, color);
 		}
 		public LRI(BarSeries series, int length, RegressionDistanceMode distanceMode, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.LRI(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
-		public LRI(OpenQuant.API.Indicator indicator, int length, RegressionDistanceMode distanceMode, BarData option, Color color)
+		public LRI(global::OpenQuant.API.Indicator indicator, int length, RegressionDistanceMode distanceMode, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.LRI(indicator.indicator, length, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
 	}
 }

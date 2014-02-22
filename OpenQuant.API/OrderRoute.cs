@@ -1,7 +1,7 @@
 using System;
 namespace OpenQuant.API
 {
-	[Obsolete("Use OpenQuant.API.Route class instead")]
+	[Obsolete("Use global::OpenQuant.API.Route class instead")]
 	public static class OrderRoute
 	{
 		public const byte Simulator = 2;

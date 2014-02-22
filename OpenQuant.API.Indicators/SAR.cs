@@ -3,7 +3,7 @@ using System;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class SAR : OpenQuant.API.Indicator
+	public class SAR : global::OpenQuant.API.Indicator
 	{
 		public double InitialAcc
 		{
@@ -46,7 +46,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.SAR(series.series, upperBound, step, initialAcc);
 		}
-		public SAR(OpenQuant.API.Indicator indicator, double upperBound, double step, double initialAcc)
+		public SAR(global::OpenQuant.API.Indicator indicator, double upperBound, double step, double initialAcc)
 		{
 			this.indicator = new SmartQuant.Indicators.SAR(indicator.indicator, upperBound, step, initialAcc);
 		}
@@ -54,7 +54,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.SAR(series.series, upperBound, step, initialAcc, color);
 		}
-		public SAR(OpenQuant.API.Indicator indicator, double upperBound, double step, double initialAcc, Color color)
+		public SAR(global::OpenQuant.API.Indicator indicator, double upperBound, double step, double initialAcc, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.SAR(indicator.indicator, upperBound, step, initialAcc, color);
 		}

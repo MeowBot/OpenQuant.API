@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class MACD : OpenQuant.API.Indicator
+	public class MACD : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length1")]
 		public int Length1
@@ -38,7 +38,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.MACD(series.series, length1, length2);
 		}
-		public MACD(OpenQuant.API.Indicator indicator, int length1, int length2)
+		public MACD(global::OpenQuant.API.Indicator indicator, int length1, int length2)
 		{
 			this.indicator = new SmartQuant.Indicators.MACD(indicator.indicator, length1, length2);
 		}
@@ -48,17 +48,17 @@ namespace OpenQuant.API.Indicators
 		}
 		public MACD(BarSeries series, int length1, int length2, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.MACD(series.series, length1, length2, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.MACD(series.series, length1, length2, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
-		public MACD(OpenQuant.API.Indicator indicator, int length1, int length2, BarData option)
+		public MACD(global::OpenQuant.API.Indicator indicator, int length1, int length2, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.MACD(indicator.indicator, length1, length2, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.MACD(indicator.indicator, length1, length2, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
 		public MACD(BarSeries series, int length1, int length2, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.MACD(series.series, length1, length2, color);
 		}
-		public MACD(OpenQuant.API.Indicator indicator, int length1, int length2, Color color)
+		public MACD(global::OpenQuant.API.Indicator indicator, int length1, int length2, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.MACD(indicator.indicator, length1, length2, color);
 		}
@@ -68,11 +68,11 @@ namespace OpenQuant.API.Indicators
 		}
 		public MACD(BarSeries series, int length1, int length2, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.MACD(series.series, length1, length2, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.MACD(series.series, length1, length2, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
-		public MACD(OpenQuant.API.Indicator indicator, int length1, int length2, BarData option, Color color)
+		public MACD(global::OpenQuant.API.Indicator indicator, int length1, int length2, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.MACD(indicator.indicator, length1, length2, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.MACD(indicator.indicator, length1, length2, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
 	}
 }

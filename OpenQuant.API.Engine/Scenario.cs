@@ -20,17 +20,17 @@ namespace OpenQuant.API.Engine
 		{
 			get
 			{
-				return new ExecutionProvider(OpenQuant.Config.Configuration.Active.ExecutionProvider);
+				return new ExecutionProvider(global::OpenQuant.Config.Configuration.Active.ExecutionProvider);
 			}
 		}
 		public MarketDataProvider MarketDataProvider
 		{
 			get
 			{
-				return new MarketDataProvider(OpenQuant.Config.Configuration.Active.MarketDataProvider);
+				return new MarketDataProvider(global::OpenQuant.Config.Configuration.Active.MarketDataProvider);
 			}
 		}
-		public OpenQuant.API.PortfolioPricer PortfolioPricer
+		public global::OpenQuant.API.PortfolioPricer PortfolioPricer
 		{
 			set
 			{

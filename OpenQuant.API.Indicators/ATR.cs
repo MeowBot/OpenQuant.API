@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class ATR : OpenQuant.API.Indicator
+	public class ATR : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -22,11 +22,11 @@ namespace OpenQuant.API.Indicators
 		{
 			get
 			{
-				return OpenQuant.API.EnumConverter.Convert((this.indicator as SmartQuant.Indicators.ATR).Style);
+				return global::OpenQuant.API.EnumConverter.Convert((this.indicator as SmartQuant.Indicators.ATR).Style);
 			}
 			set
 			{
-				(this.indicator as SmartQuant.Indicators.ATR).Style = OpenQuant.API.EnumConverter.Convert(value);
+				(this.indicator as SmartQuant.Indicators.ATR).Style = global::OpenQuant.API.EnumConverter.Convert(value);
 			}
 		}
 		private ATR()
@@ -37,7 +37,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.ATR(series.series, length);
 		}
-		public ATR(OpenQuant.API.Indicator indicator, int length)
+		public ATR(global::OpenQuant.API.Indicator indicator, int length)
 		{
 			this.indicator = new SmartQuant.Indicators.ATR(indicator.indicator, length);
 		}
@@ -45,7 +45,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.ATR(series.series, length, color);
 		}
-		public ATR(OpenQuant.API.Indicator indicator, int length, Color color)
+		public ATR(global::OpenQuant.API.Indicator indicator, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.ATR(indicator.indicator, length, color);
 		}

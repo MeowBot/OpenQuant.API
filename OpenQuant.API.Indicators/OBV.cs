@@ -3,7 +3,7 @@ using System;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class OBV : OpenQuant.API.Indicator
+	public class OBV : global::OpenQuant.API.Indicator
 	{
 		private OBV()
 		{
@@ -13,7 +13,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.OBV(series.series);
 		}
-		public OBV(OpenQuant.API.Indicator indicator)
+		public OBV(global::OpenQuant.API.Indicator indicator)
 		{
 			this.indicator = new SmartQuant.Indicators.OBV(indicator.indicator);
 		}
@@ -21,7 +21,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.OBV(series.series, color);
 		}
-		public OBV(OpenQuant.API.Indicator indicator, Color color)
+		public OBV(global::OpenQuant.API.Indicator indicator, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.OBV(indicator.indicator, color);
 		}

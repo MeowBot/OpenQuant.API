@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class HV : OpenQuant.API.Indicator
+	public class HV : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -38,33 +38,33 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.HV(series.series, length, (double)span);
 		}
-		public HV(OpenQuant.API.Indicator indicator, int length, int span)
+		public HV(global::OpenQuant.API.Indicator indicator, int length, int span)
 		{
 			this.indicator = new SmartQuant.Indicators.HV(indicator.indicator, length, (double)span);
 		}
 		public HV(BarSeries series, int length, int span, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.HV(series.series, length, (double)span, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.HV(series.series, length, (double)span, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
-		public HV(OpenQuant.API.Indicator indicator, int length, int span, BarData option)
+		public HV(global::OpenQuant.API.Indicator indicator, int length, int span, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.HV(indicator.indicator, length, (double)span, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.HV(indicator.indicator, length, (double)span, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
 		public HV(BarSeries series, int length, int span, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.HV(series.series, length, (double)span, color);
 		}
-		public HV(OpenQuant.API.Indicator indicator, int length, int span, Color color)
+		public HV(global::OpenQuant.API.Indicator indicator, int length, int span, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.HV(indicator.indicator, length, (double)span, color);
 		}
 		public HV(BarSeries series, int length, int span, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.HV(series.series, length, (double)span, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.HV(series.series, length, (double)span, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
-		public HV(OpenQuant.API.Indicator indicator, int length, int span, BarData option, Color color)
+		public HV(global::OpenQuant.API.Indicator indicator, int length, int span, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.HV(indicator.indicator, length, (double)span, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.HV(indicator.indicator, length, (double)span, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
 	}
 }

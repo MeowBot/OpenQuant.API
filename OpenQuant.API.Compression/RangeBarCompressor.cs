@@ -10,7 +10,7 @@ namespace OpenQuant.API.Compression
 			double price = entry.Items[0].Price;
 			if (this.bar == null)
 			{
-				base.CreateNewBar(OpenQuant.API.BarType.Range, entry.DateTime, entry.DateTime, price);
+				base.CreateNewBar(global::OpenQuant.API.BarType.Range, entry.DateTime, entry.DateTime, price);
 				return;
 			}
 			base.AddItemsToBar(entry.Items);
@@ -20,7 +20,7 @@ namespace OpenQuant.API.Compression
 			{
 				if (10000.0 * (this.bar.High - this.bar.Low) >= (double)this.newBarSize)
 				{
-					OpenQuant.API.Bar bar = new OpenQuant.API.Bar(new SmartQuant.Data.Bar(SmartQuant.Data.BarType.Range, this.newBarSize, entry.DateTime, entry.DateTime, price, price, price, price, 0L, 0L));
+					global::OpenQuant.API.Bar bar = new global::OpenQuant.API.Bar(new SmartQuant.Data.Bar(SmartQuant.Data.BarType.Range, this.newBarSize, entry.DateTime, entry.DateTime, price, price, price, price, 0L, 0L));
 					if (this.bar.High == price)
 					{
 						this.bar.bar.High = this.bar.Low + (double)this.newBarSize / 10000.0;

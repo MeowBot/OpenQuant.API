@@ -3,7 +3,7 @@ using System;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class EMV : OpenQuant.API.Indicator
+	public class EMV : global::OpenQuant.API.Indicator
 	{
 		private EMV()
 		{
@@ -13,7 +13,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.EMV(series.series);
 		}
-		public EMV(OpenQuant.API.Indicator indicator)
+		public EMV(global::OpenQuant.API.Indicator indicator)
 		{
 			this.indicator = new SmartQuant.Indicators.EMV(indicator.indicator);
 		}
@@ -21,7 +21,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.EMV(series.series, color);
 		}
-		public EMV(OpenQuant.API.Indicator indicator, Color color)
+		public EMV(global::OpenQuant.API.Indicator indicator, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.EMV(indicator.indicator, color);
 		}

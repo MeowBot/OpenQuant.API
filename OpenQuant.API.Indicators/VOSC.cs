@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class VOSC : OpenQuant.API.Indicator
+	public class VOSC : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length1")]
 		public int Length1
@@ -38,7 +38,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.VOSC(series.series, length1, length2);
 		}
-		public VOSC(OpenQuant.API.Indicator indicator, int length1, int length2)
+		public VOSC(global::OpenQuant.API.Indicator indicator, int length1, int length2)
 		{
 			this.indicator = new SmartQuant.Indicators.VOSC(indicator.indicator, length1, length2);
 		}
@@ -46,7 +46,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.VOSC(series.series, length1, length2, color);
 		}
-		public VOSC(OpenQuant.API.Indicator indicator, int length1, int length2, Color color)
+		public VOSC(global::OpenQuant.API.Indicator indicator, int length1, int length2, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.VOSC(indicator.indicator, length1, length2, color);
 		}

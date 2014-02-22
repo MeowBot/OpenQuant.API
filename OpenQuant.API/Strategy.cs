@@ -68,7 +68,7 @@ namespace OpenQuant.API
 		{
 			get
 			{
-				switch (OpenQuant.Config.Configuration.ActiveMode)
+				switch (global::OpenQuant.Config.Configuration.ActiveMode)
 				{
 				case ConfigurationMode.Simulation:
 					return StrategyMode.Simulation;
@@ -85,14 +85,14 @@ namespace OpenQuant.API
 		{
 			get
 			{
-				return new ExecutionProvider(OpenQuant.Config.Configuration.Active.ExecutionProvider);
+				return new ExecutionProvider(global::OpenQuant.Config.Configuration.Active.ExecutionProvider);
 			}
 		}
 		public MarketDataProvider MarketDataProvider
 		{
 			get
 			{
-				return new MarketDataProvider(OpenQuant.Config.Configuration.Active.MarketDataProvider);
+				return new MarketDataProvider(global::OpenQuant.Config.Configuration.Active.MarketDataProvider);
 			}
 		}
 		public bool Active

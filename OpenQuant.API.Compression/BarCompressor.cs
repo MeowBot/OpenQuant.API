@@ -6,27 +6,27 @@ namespace OpenQuant.API.Compression
 	{
 		protected long oldBarSize;
 		protected long newBarSize;
-		protected OpenQuant.API.Bar bar;
+		protected global::OpenQuant.API.Bar bar;
 		private event CompressedBarEventHandler NewCompressedBar;
 		protected BarCompressor()
 		{
 			this.bar = null;
 		}
-		public static BarCompressor GetCompressor(OpenQuant.API.BarType barType, long oldBarSize, long newBarSize)
+		public static BarCompressor GetCompressor(global::OpenQuant.API.BarType barType, long oldBarSize, long newBarSize)
 		{
 			BarCompressor barCompressor;
 			switch (barType)
 			{
-			case OpenQuant.API.BarType.Time:
+			case global::OpenQuant.API.BarType.Time:
 				barCompressor = new TimeBarCompressor();
 				break;
-			case OpenQuant.API.BarType.Tick:
+			case global::OpenQuant.API.BarType.Tick:
 				barCompressor = new TickBarCompressor();
 				break;
-			case OpenQuant.API.BarType.Volume:
+			case global::OpenQuant.API.BarType.Volume:
 				barCompressor = new VolumeBarCompressor();
 				break;
-			case OpenQuant.API.BarType.Range:
+			case global::OpenQuant.API.BarType.Range:
 				barCompressor = new RangeBarCompressor();
 				break;
 			default:
@@ -45,14 +45,14 @@ namespace OpenQuant.API.Compression
 				this.AddItemToBar(item);
 			}
 		}
-		protected void CreateNewBar(OpenQuant.API.BarType barType, DateTime beginTime, DateTime endTime, double price)
+		protected void CreateNewBar(global::OpenQuant.API.BarType barType, DateTime beginTime, DateTime endTime, double price)
 		{
-			if (barType == OpenQuant.API.BarType.Time && this.newBarSize == 86400L)
+			if (barType == global::OpenQuant.API.BarType.Time && this.newBarSize == 86400L)
 			{
-				this.bar = new OpenQuant.API.Bar(new Daily(beginTime, price, price, price, price, 0L));
+				this.bar = new global::OpenQuant.API.Bar(new Daily(beginTime, price, price, price, price, 0L));
 				return;
 			}
-			this.bar = new OpenQuant.API.Bar(new SmartQuant.Data.Bar(EnumConverter.Convert(barType), this.newBarSize, beginTime, endTime, price, price, price, price, 0L, 0L));
+			this.bar = new global::OpenQuant.API.Bar(new SmartQuant.Data.Bar(EnumConverter.Convert(barType), this.newBarSize, beginTime, endTime, price, price, price, price, 0L, 0L));
 		}
 		protected void EmitNewCompressedBar()
 		{

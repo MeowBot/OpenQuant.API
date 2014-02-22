@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class UltOsc : OpenQuant.API.Indicator
+	public class UltOsc : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("N1")]
 		public int N1
@@ -50,7 +50,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.UltOsc(series.series, n1, n2, n3);
 		}
-		public UltOsc(OpenQuant.API.Indicator indicator, int n1, int n2, int n3)
+		public UltOsc(global::OpenQuant.API.Indicator indicator, int n1, int n2, int n3)
 		{
 			this.indicator = new SmartQuant.Indicators.UltOsc(indicator.indicator, n1, n2, n3);
 		}
@@ -58,7 +58,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.UltOsc(series.series, n1, n2, n3, color);
 		}
-		public UltOsc(OpenQuant.API.Indicator indicator, int n1, int n2, int n3, Color color)
+		public UltOsc(global::OpenQuant.API.Indicator indicator, int n1, int n2, int n3, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.UltOsc(indicator.indicator, n1, n2, n3, color);
 		}

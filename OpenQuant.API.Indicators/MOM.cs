@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 namespace OpenQuant.API.Indicators
 {
-	public class MOM : OpenQuant.API.Indicator
+	public class MOM : global::OpenQuant.API.Indicator
 	{
 		[Category("Parameters"), Description("Length")]
 		public int Length
@@ -26,7 +26,7 @@ namespace OpenQuant.API.Indicators
 		{
 			this.indicator = new SmartQuant.Indicators.MOM(series.series, length);
 		}
-		public MOM(OpenQuant.API.Indicator indicator, int length)
+		public MOM(global::OpenQuant.API.Indicator indicator, int length)
 		{
 			this.indicator = new SmartQuant.Indicators.MOM(indicator.indicator, length);
 		}
@@ -36,17 +36,17 @@ namespace OpenQuant.API.Indicators
 		}
 		public MOM(BarSeries series, int length, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.MOM(series.series, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.MOM(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
-		public MOM(OpenQuant.API.Indicator indicator, int length, BarData option)
+		public MOM(global::OpenQuant.API.Indicator indicator, int length, BarData option)
 		{
-			this.indicator = new SmartQuant.Indicators.MOM(indicator.indicator, length, OpenQuant.API.EnumConverter.Convert(option));
+			this.indicator = new SmartQuant.Indicators.MOM(indicator.indicator, length, global::OpenQuant.API.EnumConverter.Convert(option));
 		}
 		public MOM(BarSeries series, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.MOM(series.series, length, color);
 		}
-		public MOM(OpenQuant.API.Indicator indicator, int length, Color color)
+		public MOM(global::OpenQuant.API.Indicator indicator, int length, Color color)
 		{
 			this.indicator = new SmartQuant.Indicators.MOM(indicator.indicator, length, color);
 		}
@@ -56,7 +56,7 @@ namespace OpenQuant.API.Indicators
 		}
 		public MOM(BarSeries series, int length, BarData option, Color color)
 		{
-			this.indicator = new SmartQuant.Indicators.MOM(series.series, length, OpenQuant.API.EnumConverter.Convert(option), color);
+			this.indicator = new SmartQuant.Indicators.MOM(series.series, length, global::OpenQuant.API.EnumConverter.Convert(option), color);
 		}
 	}
 }

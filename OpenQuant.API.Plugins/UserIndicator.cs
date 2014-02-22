@@ -4,7 +4,7 @@ using System;
 using System.ComponentModel;
 namespace OpenQuant.API.Plugins
 {
-	public class UserIndicator : OpenQuant.API.Indicator
+	public class UserIndicator : global::OpenQuant.API.Indicator
 	{
 		private ISeries input;
 		private SmartQuant.Series.TimeSeries series;
@@ -109,17 +109,17 @@ namespace OpenQuant.API.Plugins
 		public UserIndicator(ISeries input)
 		{
 			this.input = input;
-			if (input is OpenQuant.API.TimeSeries)
+			if (input is global::OpenQuant.API.TimeSeries)
 			{
-				this.series = (input as OpenQuant.API.TimeSeries).series;
+				this.series = (input as global::OpenQuant.API.TimeSeries).series;
 			}
-			if (input is OpenQuant.API.BarSeries)
+			if (input is global::OpenQuant.API.BarSeries)
 			{
-				this.series = (input as OpenQuant.API.BarSeries).series;
+				this.series = (input as global::OpenQuant.API.BarSeries).series;
 			}
-			if (input is OpenQuant.API.Indicator)
+			if (input is global::OpenQuant.API.Indicator)
 			{
-				this.series = (input as OpenQuant.API.Indicator).indicator;
+				this.series = (input as global::OpenQuant.API.Indicator).indicator;
 			}
 			this.indicator = new SmartQuant.Indicators.Indicator(this.series);
 		}
@@ -166,32 +166,32 @@ namespace OpenQuant.API.Plugins
 			this.Init();
 			return base.Contains(bar);
 		}
-		public override bool CrossesBelow(OpenQuant.API.BarSeries series, Bar bar)
+		public override bool CrossesBelow(global::OpenQuant.API.BarSeries series, Bar bar)
 		{
 			this.Init();
 			return base.CrossesBelow(series, bar);
 		}
-		public override bool CrossesAbove(OpenQuant.API.BarSeries series, Bar bar)
+		public override bool CrossesAbove(global::OpenQuant.API.BarSeries series, Bar bar)
 		{
 			this.Init();
 			return base.CrossesAbove(series, bar);
 		}
-		public override bool CrossesBelow(OpenQuant.API.Indicator indicator, Bar bar)
+		public override bool CrossesBelow(global::OpenQuant.API.Indicator indicator, Bar bar)
 		{
 			this.Init();
 			return base.CrossesBelow(indicator, bar);
 		}
-		public override bool CrossesAbove(OpenQuant.API.Indicator indicator, Bar bar)
+		public override bool CrossesAbove(global::OpenQuant.API.Indicator indicator, Bar bar)
 		{
 			this.Init();
 			return base.CrossesAbove(indicator, bar);
 		}
-		public override Cross Crosses(OpenQuant.API.Indicator indicator, Bar bar)
+		public override Cross Crosses(global::OpenQuant.API.Indicator indicator, Bar bar)
 		{
 			this.Init();
 			return base.Crosses(indicator, bar);
 		}
-		public override Cross Crosses(OpenQuant.API.BarSeries series, Bar bar)
+		public override Cross Crosses(global::OpenQuant.API.BarSeries series, Bar bar)
 		{
 			this.Init();
 			return base.Crosses(series, bar);
