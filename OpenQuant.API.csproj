@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{D693DD70-9472-4AB2-A21E-FE1AF5644F83}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>OpenQuant.API</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="SmartQuant.Providers">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant.Instruments">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Instruments.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="OpenQuant.ObjectMap">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Bin\OpenQuant.ObjectMap.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant.Charting">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant.Series">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Series.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant.Execution">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Execution.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant.Indicators">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Indicators.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="SmartQuant.Data">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant.Quant">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Quant.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant.FIX">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.FIX.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant.Trading">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Trading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="SmartQuant.Testing">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Testing.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenQuant.Config">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Bin\OpenQuant.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartQuant.FIXData">
+      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.FIXData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OpenQuant.API.Compression\BarCompressor.cs" />
+    <Compile Include="OpenQuant.API.Compression\BarDataEnumerator.cs" />
+    <Compile Include="OpenQuant.API.Compression\CompressedBarEventArgs.cs" />
+    <Compile Include="OpenQuant.API.Compression\CompressedBarEventHandler.cs" />
+    <Compile Include="OpenQuant.API.Compression\DataEntry.cs" />
+    <Compile Include="OpenQuant.API.Compression\DataEntryEnumerator.cs" />
+    <Compile Include="OpenQuant.API.Compression\PriceSizeItem.cs" />
+    <Compile Include="OpenQuant.API.Compression\QuoteDataEnumerator.cs" />
+    <Compile Include="OpenQuant.API.Compression\RangeBarCompressor.cs" />
+    <Compile Include="OpenQuant.API.Compression\TickBarCompressor.cs" />
+    <Compile Include="OpenQuant.API.Compression\TimeBarCompressor.cs" />
+    <Compile Include="OpenQuant.API.Compression\TradeDataEnumerator.cs" />
+    <Compile Include="OpenQuant.API.Compression\VolumeBarCompressor.cs" />
+    <Compile Include="OpenQuant.API.Design\AltIDGroupListEditor.cs" />
+    <Compile Include="OpenQuant.API.Design\AltIDGroupListTypeConverter.cs" />
+    <Compile Include="OpenQuant.API.Design\AltIDGroupPropertyDescriptor.cs" />
+    <Compile Include="OpenQuant.API.Design\AltIDGroupTypeConverter.cs" />
+    <Compile Include="OpenQuant.API.Design\AltSourceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenQuant.API.Design\AltSourceTypeEditor.cs" />
+    <Compile Include="OpenQuant.API.Design\IBExTypeConverter.cs" />
+    <Compile Include="OpenQuant.API.Engine\IDE.cs" />
+    <Compile Include="OpenQuant.API.Engine\InstrumentList.cs" />
+    <Compile Include="OpenQuant.API.Engine\Parameter.cs" />
+    <Compile Include="OpenQuant.API.Engine\ParameterSet.cs" />
+    <Compile Include="OpenQuant.API.Engine\Project.cs" />
+    <Compile Include="OpenQuant.API.Engine\ProjectInfo.cs" />
+    <Compile Include="OpenQuant.API.Engine\ProjectInfoList.cs" />
+    <Compile Include="OpenQuant.API.Engine\ProjectList.cs" />
+    <Compile Include="OpenQuant.API.Engine\Scenario.cs" />
+    <Compile Include="OpenQuant.API.Engine\Solution.cs" />
+    <Compile Include="OpenQuant.API.Engine\SolutionInfo.cs" />
+    <Compile Include="OpenQuant.API.Engine\Statistics.cs" />
+    <Compile Include="OpenQuant.API.Indicators\AD.cs" />
+    <Compile Include="OpenQuant.API.Indicators\ADX.cs" />
+    <Compile Include="OpenQuant.API.Indicators\ADXR.cs" />
+    <Compile Include="OpenQuant.API.Indicators\AroonL.cs" />
+    <Compile Include="OpenQuant.API.Indicators\AroonU.cs" />
+    <Compile Include="OpenQuant.API.Indicators\ATR.cs" />
+    <Compile Include="OpenQuant.API.Indicators\B.cs" />
+    <Compile Include="OpenQuant.API.Indicators\BBL.cs" />
+    <Compile Include="OpenQuant.API.Indicators\BBU.cs" />
+    <Compile Include="OpenQuant.API.Indicators\CAD.cs" />
+    <Compile Include="OpenQuant.API.Indicators\CCI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\CMO.cs" />
+    <Compile Include="OpenQuant.API.Indicators\DPO.cs" />
+    <Compile Include="OpenQuant.API.Indicators\DX.cs" />
+    <Compile Include="OpenQuant.API.Indicators\D_Fast.cs" />
+    <Compile Include="OpenQuant.API.Indicators\D_Slow.cs" />
+    <Compile Include="OpenQuant.API.Indicators\EMA.cs" />
+    <Compile Include="OpenQuant.API.Indicators\EMV.cs" />
+    <Compile Include="OpenQuant.API.Indicators\ENVL.cs" />
+    <Compile Include="OpenQuant.API.Indicators\ENVU.cs" />
+    <Compile Include="OpenQuant.API.Indicators\FO.cs" />
+    <Compile Include="OpenQuant.API.Indicators\HV.cs" />
+    <Compile Include="OpenQuant.API.Indicators\IndicatorStyle.cs" />
+    <Compile Include="OpenQuant.API.Indicators\KCL.cs" />
+    <Compile Include="OpenQuant.API.Indicators\KCU.cs" />
+    <Compile Include="OpenQuant.API.Indicators\KRI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\K_Fast.cs" />
+    <Compile Include="OpenQuant.API.Indicators\K_Slow.cs" />
+    <Compile Include="OpenQuant.API.Indicators\LRI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\LRS.cs" />
+    <Compile Include="OpenQuant.API.Indicators\MACD.cs" />
+    <Compile Include="OpenQuant.API.Indicators\MarketFI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\MASS.cs" />
+    <Compile Include="OpenQuant.API.Indicators\MDI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\MDM.cs" />
+    <Compile Include="OpenQuant.API.Indicators\MFI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\MOM.cs" />
+    <Compile Include="OpenQuant.API.Indicators\NVI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\OBV.cs" />
+    <Compile Include="OpenQuant.API.Indicators\OSC.cs" />
+    <Compile Include="OpenQuant.API.Indicators\PCL.cs" />
+    <Compile Include="OpenQuant.API.Indicators\PCU.cs" />
+    <Compile Include="OpenQuant.API.Indicators\PDI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\PDM.cs" />
+    <Compile Include="OpenQuant.API.Indicators\PERF.cs" />
+    <Compile Include="OpenQuant.API.Indicators\PVI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\PVT.cs" />
+    <Compile Include="OpenQuant.API.Indicators\R.cs" />
+    <Compile Include="OpenQuant.API.Indicators\Range.cs" />
+    <Compile Include="OpenQuant.API.Indicators\RegressionDistanceMode.cs" />
+    <Compile Include="OpenQuant.API.Indicators\ROC.cs" />
+    <Compile Include="OpenQuant.API.Indicators\RSI.cs" />
+    <Compile Include="OpenQuant.API.Indicators\SAR.cs" />
+    <Compile Include="OpenQuant.API.Indicators\SMA.cs" />
+    <Compile Include="OpenQuant.API.Indicators\SMD.cs" />
+    <Compile Include="OpenQuant.API.Indicators\SMV.cs" />
+    <Compile Include="OpenQuant.API.Indicators\TH.cs" />
+    <Compile Include="OpenQuant.API.Indicators\TL.cs" />
+    <Compile Include="OpenQuant.API.Indicators\TR.cs" />
+    <Compile Include="OpenQuant.API.Indicators\TRIX.cs" />
+    <Compile Include="OpenQuant.API.Indicators\UltOsc.cs" />
+    <Compile Include="OpenQuant.API.Indicators\VCH.cs" />
+    <Compile Include="OpenQuant.API.Indicators\VHF.cs" />
+    <Compile Include="OpenQuant.API.Indicators\VOSC.cs" />
+    <Compile Include="OpenQuant.API.Indicators\VROC.cs" />
+    <Compile Include="OpenQuant.API.Indicators\VWAP.cs" />
+    <Compile Include="OpenQuant.API.Indicators\WAD.cs" />
+    <Compile Include="OpenQuant.API.Indicators\WMA.cs" />
+    <Compile Include="OpenQuant.API.Logs\IStrategyLog.cs" />
+    <Compile Include="OpenQuant.API.Logs\IStrategyLogList.cs" />
+    <Compile Include="OpenQuant.API.Logs\IStrategyLogManager.cs" />
+    <Compile Include="OpenQuant.API.Plugins\OrderRecord.cs" />
+    <Compile Include="OpenQuant.API.Plugins\SQProvider.cs" />
+    <Compile Include="OpenQuant.API.Plugins\SQProviderPropertyDescriptor.cs" />
+    <Compile Include="OpenQuant.API.Plugins\SQProviderTypeDescriptionProvider.cs" />
+    <Compile Include="OpenQuant.API.Plugins\SQProviderTypeDescriptor.cs" />
+    <Compile Include="OpenQuant.API.Plugins\SubscriptionDataType.cs" />
+    <Compile Include="OpenQuant.API.Plugins\UserIndicator.cs" />
+    <Compile Include="OpenQuant.API.Plugins\UserProvider.cs" />
+    <Compile Include="OpenQuant.API.Quant\FinMath.cs" />
+    <Compile Include="OpenQuant.API.Quant\Matrix.cs" />
+    <Compile Include="OpenQuant.API.Quant\MatrixDiag.cs" />
+    <Compile Include="OpenQuant.API.Quant\OptionPosition.cs" />
+    <Compile Include="OpenQuant.API.Quant\OptionPrice.cs" />
+    <Compile Include="OpenQuant.API.Quant\OptionType.cs" />
+    <Compile Include="OpenQuant.API.Quant\Vector.cs" />
+    <Compile Include="OpenQuant.API\AltIDGroup.cs" />
+    <Compile Include="OpenQuant.API\AltIDGroupList.cs" />
+    <Compile Include="OpenQuant.API\Appearance.cs" />
+    <Compile Include="OpenQuant.API\Bar.cs" />
+    <Compile Include="OpenQuant.API\BarData.cs" />
+    <Compile Include="OpenQuant.API\BarFactory.cs" />
+    <Compile Include="OpenQuant.API\BarRequest.cs" />
+    <Compile Include="OpenQuant.API\BarRequestList.cs" />
+    <Compile Include="OpenQuant.API\BarSeries.cs" />
+    <Compile Include="OpenQuant.API\BarSeriesEnumerator.cs" />
+    <Compile Include="OpenQuant.API\BarSeriesInfo.cs" />
+    <Compile Include="OpenQuant.API\BarSeriesList.cs" />
+    <Compile Include="OpenQuant.API\BarType.cs" />
+    <Compile Include="OpenQuant.API\BidAsk.cs" />
+    <Compile Include="OpenQuant.API\BrokerAccount.cs" />
+    <Compile Include="OpenQuant.API\BrokerAccountField.cs" />
+    <Compile Include="OpenQuant.API\BrokerAccountFieldList.cs" />
+    <Compile Include="OpenQuant.API\BrokerAccountList.cs" />
+    <Compile Include="OpenQuant.API\BrokerInfo.cs" />
+    <Compile Include="OpenQuant.API\BrokerOrder.cs" />
+    <Compile Include="OpenQuant.API\BrokerOrderField.cs" />
+    <Compile Include="OpenQuant.API\BrokerOrderFieldList.cs" />
+    <Compile Include="OpenQuant.API\BrokerOrderList.cs" />
+    <Compile Include="OpenQuant.API\BrokerPosition.cs" />
+    <Compile Include="OpenQuant.API\BrokerPositionField.cs" />
+    <Compile Include="OpenQuant.API\BrokerPositionFieldList.cs" />
+    <Compile Include="OpenQuant.API\BrokerPositionList.cs" />
+    <Compile Include="OpenQuant.API\Canvas.cs" />
+    <Compile Include="OpenQuant.API\Chart.cs" />
+    <Compile Include="OpenQuant.API\Clock.cs" />
+    <Compile Include="OpenQuant.API\CommissionType.cs" />
+    <Compile Include="OpenQuant.API\Cross.cs" />
+    <Compile Include="OpenQuant.API\DataManager.cs" />
+    <Compile Include="OpenQuant.API\DataRequests.cs" />
+    <Compile Include="OpenQuant.API\DataType.cs" />
+    <Compile Include="OpenQuant.API\DefaultCurrencyConverter.cs" />
+    <Compile Include="OpenQuant.API\DefaultPortfolioPricer.cs" />
+    <Compile Include="OpenQuant.API\DrawStyle.cs" />
+    <Compile Include="OpenQuant.API\EnumConverter.cs" />
+    <Compile Include="OpenQuant.API\ExecutionProvider.cs" />
+    <Compile Include="OpenQuant.API\ExecutionReport.cs" />
+    <Compile Include="OpenQuant.API\ExecutionReportList.cs" />
+    <Compile Include="OpenQuant.API\ExecutionReportListEnumerator.cs" />
+    <Compile Include="OpenQuant.API\ExecutionReportType.cs" />
+    <Compile Include="OpenQuant.API\HistoricalDataProvider.cs" />
+    <Compile Include="OpenQuant.API\HistoricalDataRequest.cs" />
+    <Compile Include="OpenQuant.API\IBEx.cs" />
+    <Compile Include="OpenQuant.API\IBFaMethod.cs" />
+    <Compile Include="OpenQuant.API\Indicator.cs" />
+    <Compile Include="OpenQuant.API\Instrument.cs" />
+    <Compile Include="OpenQuant.API\InstrumentList.cs" />
+    <Compile Include="OpenQuant.API\InstrumentManager.cs" />
+    <Compile Include="OpenQuant.API\InstrumentProvider.cs" />
+    <Compile Include="OpenQuant.API\InstrumentType.cs" />
+    <Compile Include="OpenQuant.API\ISeries.cs" />
+    <Compile Include="OpenQuant.API\MarketDataFilter.cs" />
+    <Compile Include="OpenQuant.API\MarketDataProvider.cs" />
+    <Compile Include="OpenQuant.API\ObjectConverter.cs" />
+    <Compile Include="OpenQuant.API\OpenQuant.cs" />
+    <Compile Include="OpenQuant.API\OptimizationParameterAttribute.cs" />
+    <Compile Include="OpenQuant.API\Order.cs" />
+    <Compile Include="OpenQuant.API\OrderBook.cs" />
+    <Compile Include="OpenQuant.API\OrderBookAction.cs" />
+    <Compile Include="OpenQuant.API\OrderBookEntry.cs" />
+    <Compile Include="OpenQuant.API\OrderBookUpdate.cs" />
+    <Compile Include="OpenQuant.API\OrderList.cs" />
+    <Compile Include="OpenQuant.API\OrderMarker.cs" />
+    <Compile Include="OpenQuant.API\OrderRoute.cs" />
+    <Compile Include="OpenQuant.API\OrderSide.cs" />
+    <Compile Include="OpenQuant.API\OrderStatus.cs" />
+    <Compile Include="OpenQuant.API\OrderType.cs" />
+    <Compile Include="OpenQuant.API\ParameterAttribute.cs" />
+    <Compile Include="OpenQuant.API\Performance.cs" />
+    <Compile Include="OpenQuant.API\Portfolio.cs" />
+    <Compile Include="OpenQuant.API\PortfolioAccount.cs" />
+    <Compile Include="OpenQuant.API\PortfolioPricer.cs" />
+    <Compile Include="OpenQuant.API\Position.cs" />
+    <Compile Include="OpenQuant.API\PositionList.cs" />
+    <Compile Include="OpenQuant.API\PositionListEnumerator.cs" />
+    <Compile Include="OpenQuant.API\PositionSide.cs" />
+    <Compile Include="OpenQuant.API\Provider.cs" />
+    <Compile Include="OpenQuant.API\ProviderError.cs" />
+    <Compile Include="OpenQuant.API\ProviderList.cs" />
+    <Compile Include="OpenQuant.API\ProviderManager.cs" />
+    <Compile Include="OpenQuant.API\ProviderProperty.cs" />
+    <Compile Include="OpenQuant.API\ProviderPropertyList.cs" />
+    <Compile Include="OpenQuant.API\PutCall.cs" />
+    <Compile Include="OpenQuant.API\Quote.cs" />
+    <Compile Include="OpenQuant.API\QuoteData.cs" />
+    <Compile Include="OpenQuant.API\QuoteSeries.cs" />
+    <Compile Include="OpenQuant.API\Route.cs" />
+    <Compile Include="OpenQuant.API\Script.cs" />
+    <Compile Include="OpenQuant.API\ScriptInfo.cs" />
+    <Compile Include="OpenQuant.API\ScriptSettings.cs" />
+    <Compile Include="OpenQuant.API\SearchOption.cs" />
+    <Compile Include="OpenQuant.API\SQMarketDataFilter.cs" />
+    <Compile Include="OpenQuant.API\SQPortfolioPricer.cs" />
+    <Compile Include="OpenQuant.API\Stop.cs" />
+    <Compile Include="OpenQuant.API\StopMode.cs" />
+    <Compile Include="OpenQuant.API\StopStatus.cs" />
+    <Compile Include="OpenQuant.API\StopType.cs" />
+    <Compile Include="OpenQuant.API\Strategy.cs" />
+    <Compile Include="OpenQuant.API\StrategyMode.cs" />
+    <Compile Include="OpenQuant.API\TimeInForce.cs" />
+    <Compile Include="OpenQuant.API\TimeSeries.cs" />
+    <Compile Include="OpenQuant.API\Trade.cs" />
+    <Compile Include="OpenQuant.API\TradeSeries.cs" />
+    <Compile Include="OpenQuant.API\Transaction.cs" />
+    <Compile Include="OpenQuant.API\TransactionList.cs" />
+    <Compile Include="OpenQuant.API\TransactionListEnumerator.cs" />
+    <Compile Include="OpenQuant.API\TransactionSide.cs" />
+    <Compile Include="OpenQuant.API\UserCommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OpenQuant.API.Design\AltSourceForm.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

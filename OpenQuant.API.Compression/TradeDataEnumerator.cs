@@ -1,0 +1,23 @@
+using System;
+namespace OpenQuant.API.Compression
+{
+	internal class TradeDataEnumerator : DataEntryEnumerator
+	{
+		private TradeSeries series;
+		public override DataEntry Current
+		{
+			get
+			{
+				Trade trade = this.series[this.index];
+				return new DataEntry(trade.DateTime, new PriceSizeItem[]
+				{
+					new PriceSizeItem(trade.Price, trade.Size)
+				});
+			}
+		}
+		public TradeDataEnumerator(TradeSeries series) : base(series.Count)
+		{
+			this.series = series;
+		}
+	}
+}
