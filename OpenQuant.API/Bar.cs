@@ -159,6 +159,10 @@ namespace OpenQuant.API
 		{
 			this.bar = new SmartQuant.Data.Bar(dateTime, open, high, low, close, volume, size);
 		}
+		public Bar(DateTime dateTime, double open, double high, double low, double close, long volume, long openInt, long size)
+		{
+			this.bar = new SmartQuant.Data.Bar(SmartQuant.Data.BarType.Time, size, dateTime, dateTime.AddSeconds((double)size), open, high, low, close, volume, openInt);
+		}
 		internal Bar(SmartQuant.Data.Bar bar)
 		{
 			this.bar = bar;
