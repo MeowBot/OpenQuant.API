@@ -3,7 +3,7 @@ OpenQuant.API加强版
 
 此OpenQuant.API.dll是由ILSpy反编译后，经过部分修改，用Visual Studio重新编译而成。
 
-针对OpenQuant 3.9.2版本（会在OpenQuant新版本出来后跟进合并，OpenQuant 2014除外）。
+针对OpenQuant 3.9.2版本（会在OpenQuant新版本出来后跟进合并，OpenQuant 2014除外），x32/x64可通用。
 
 ## Features
 
