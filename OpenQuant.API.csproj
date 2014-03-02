@@ -31,52 +31,52 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System" />
     <Reference Include="SmartQuant.Providers">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Providers.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Providers.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Instruments">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Instruments.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Instruments.dll</HintPath>
     </Reference>
     <Reference Include="System.Design" />
     <Reference Include="OpenQuant.ObjectMap">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Bin\OpenQuant.ObjectMap.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Bin\OpenQuant.ObjectMap.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Charting">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Charting.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Charting.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Series">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Series.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Series.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Execution">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Execution.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Execution.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Indicators">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Indicators.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Indicators.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="SmartQuant.Data">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Data.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Data.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Quant">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Quant.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Quant.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.FIX">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.FIX.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.FIX.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.Trading">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Trading.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Trading.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="SmartQuant.Testing">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Testing.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.Testing.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.dll</HintPath>
     </Reference>
     <Reference Include="OpenQuant.Config">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Bin\OpenQuant.Config.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Bin\OpenQuant.Config.dll</HintPath>
     </Reference>
     <Reference Include="SmartQuant.FIXData">
-      <HintPath>..\..\..\..\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.FIXData.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\SmartQuant Ltd\OpenQuant\Framework\bin\SmartQuant.FIXData.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
