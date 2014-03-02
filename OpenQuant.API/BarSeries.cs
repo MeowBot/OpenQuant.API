@@ -268,5 +268,9 @@ namespace OpenQuant.API
 		{
 			return this.series.Ago(n).Close;
 		}
+		public static implicit operator double(BarSeries bars)
+		{
+			return bars.Last.Close;
+		}
 	}
 }

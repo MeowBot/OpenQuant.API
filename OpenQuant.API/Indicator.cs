@@ -346,5 +346,9 @@ namespace OpenQuant.API
 		{
 			return new TimeSeries(indicator1.indicator / indicator2.indicator);
 		}
+		public static implicit operator double(Indicator indicator)
+		{
+			return indicator.Last;
+		}
 	}
 }
