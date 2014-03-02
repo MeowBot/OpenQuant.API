@@ -194,6 +194,18 @@ namespace OpenQuant.API
 		{
 			return EnumConverter.Convert(this.series.Crosses(series.series, bar.bar));
 		}
+		public bool CrossesBelow(double level, Bar bar)
+		{
+			return this.series.CrossesBelow(level, this.series.GetIndex(bar.DateTime));
+		}
+		public bool CrossesAbove(double level, Bar bar)
+		{
+			return this.series.CrossesAbove(level, this.series.GetIndex(bar.DateTime));
+		}
+		public Cross Crosses(double level, Bar bar)
+		{
+			return EnumConverter.Convert(this.series.Crosses(level, this.series.GetIndex(bar.DateTime)));
+		}
 		public double HighestHigh()
 		{
 			return this.series.HighestHigh();
