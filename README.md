@@ -3,11 +3,16 @@ OpenQuant.API加强版
 
 此OpenQuant.API.dll是由ILSpy反编译后，经过部分修改，用Visual Studio重新编译而成。
 
-针对OpenQuant 3.9.2版本（会在OpenQuant新版本出来后跟进合并，OpenQuant 2014除外），x32/x64可通用。
+随时跟进OpenQuant最新版本，OpenQuant 2014除外，x32/x64可通用。
 
 ## Features
 
-1. 增加Bar constructor：`Bar(DateTime dateTime, double open, double high, double low, double close, long volume, long openInt, long size)`
+* 增加Bar constructor：`Bar(DateTime dateTime, double open, double high, double low, double close, long volume, long openInt, long size)`
+* 增加BarSeries的Crosses系重载函数
+    - `Cross Crosses(double level, Bar bar)`
+    - `bool CrossesAbove(double level, Bar bar)`
+    - `bool CrossesBelow(double level, Bar bar)`
+* 为BarSeries和Indicator增加Implicit Conversion Operator，分别转换为BarSeries.Last.Close和Indicator.Last，支持如`indicator + bars * 0.001`等语句
 
 ## Developer's Guide
 
