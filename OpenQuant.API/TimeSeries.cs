@@ -312,17 +312,49 @@ namespace OpenQuant.API
 		{
 			return new TimeSeries(series1.series + series2.series);
 		}
+		public static TimeSeries operator +(TimeSeries series, double value)
+		{
+			return new TimeSeries(series.series + value);
+		}
+		public static TimeSeries operator +(double value, TimeSeries series)
+		{
+			return new TimeSeries(value + series.series);
+		}
 		public static TimeSeries operator -(TimeSeries series1, TimeSeries series2)
 		{
 			return new TimeSeries(series1.series - series2.series);
+		}
+		public static TimeSeries operator -(TimeSeries series, double value)
+		{
+			return new TimeSeries(series.series - value);
+		}
+		public static TimeSeries operator -(double value, TimeSeries series)
+		{
+			return new TimeSeries(value - series.series);
 		}
 		public static TimeSeries operator *(TimeSeries series1, TimeSeries series2)
 		{
 			return new TimeSeries(series1.series * series2.series);
 		}
+		public static TimeSeries operator *(TimeSeries series, double value)
+		{
+			return new TimeSeries(series.series * value);
+		}
+		public static TimeSeries operator *(double value, TimeSeries series)
+		{
+			return new TimeSeries(value * series.series);
+		}
 		public static TimeSeries operator /(TimeSeries series1, TimeSeries series2)
 		{
 			return new TimeSeries(series1.series + series2.series);
+		}
+		public static TimeSeries operator /(TimeSeries series, double value)
+		{
+			return new TimeSeries(series.series / value);
+		}
+		public static TimeSeries operator /(double value, TimeSeries series)
+		{
+			return new TimeSeries(value / series.series);
 		}
 	}
 }
