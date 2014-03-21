@@ -234,7 +234,7 @@ namespace OpenQuant.API
 		{
 			BarSeries barSeries = new BarSeries();
 			int index = this.series.GetIndex(dateTime1, EIndexOption.Next);
-			int index2 = this.series.GetIndex(dateTime1, EIndexOption.Prev);
+			int index2 = this.series.GetIndex(dateTime2, EIndexOption.Prev);
 			if (index != -1 && index2 != -1)
 			{
 				for (int i = index; i <= index2; i++)
